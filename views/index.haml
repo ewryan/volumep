@@ -1,0 +1,10 @@
+%h1 volumep
+%a(title="max" href="http://localhost:4567/max") Max
+%a(title="max" href="http://localhost:4567/mute") Mute
+
+%br
+%br
+
+%form{:action => "/set_volume", :method => "post"}
+  %input{:type=>"range", :min=>"0", :max=>"100", :value=>@vol, :step=>"5", :name => "vol"}
+  %input{:type => "submit", :value => "Send", :class => "button"}
