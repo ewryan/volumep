@@ -1,3 +1,7 @@
 A sinatra app for controlling system volume on OS X.
 
 I put this simple app together so I can control the volume on my mac mini htpc without having to fire up a screen sharing session.
+
+Getting started:
+-bundle install
+-ruby volumep.rb
