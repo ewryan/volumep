@@ -1,10 +1,14 @@
-%h1 volumep
-%a{:title=>"max", :href=>"/max"} Max
-%a{:title=>"max", :href=>"/mute"} Mute
+%div(data-role="page")
 
-%br
-%br
+  %div(data-role="header")
+    %h1 volumep
+  %div(data-role="content")
+    %a{:title=>"max", :href=>"/max"} Max
+    %a{:title=>"max", :href=>"/mute"} Mute
 
-%form{:action => "/set_volume", :method => "post"}
-  %input{:type=>"range", :min=>"0", :max=>"100", :value=>@vol, :step=>"5", :name => "vol"}
-  %input{:type => "submit", :value => "Send", :class => "button"}
+    %br
+    %br
+
+    %form{:action => "/set_volume", :method => "post"}
+      %input{:type=>"range", :min=>"0", :max=>"100", :value=>@vol, :step=>"5", :name => "vol"}
+      %input{:type => "submit", :value => "Send", :class => "button"}
