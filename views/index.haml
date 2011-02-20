@@ -3,12 +3,15 @@
   %div(data-role="header")
     %h1 volumep
   %div(data-role="content")
-    %a{:title=>"max", :href=>"/max"} Max
-    %a{:title=>"max", :href=>"/mute"} Mute
+    %form{:action => "/max", :method => "post"}
+      %input{:type => "submit", :value => "Max", :class => "button"}
+
+    %form{:action => "/mute", :method => "post"}
+      %input{:type => "submit", :value => "Mute", :class => "button"}
 
     %br
     %br
 
     %form{:action => "/set_volume", :method => "post"}
       %input{:type=>"range", :min=>"0", :max=>"100", :value=>@vol, :step=>"5", :name => "vol"}
-      %input{:type => "submit", :value => "Send", :class => "button"}
+      %input{:type => "submit", :value => "Set", :class => "button"}

@@ -7,12 +7,12 @@ get '/' do
   haml :index
 end
 
-get '/mute' do
+post '/mute' do
   set_volume 0
   redirect '/'
 end
 
-get '/max' do
+post '/max' do
   set_volume 100
   redirect '/'
 end
